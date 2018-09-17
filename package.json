@@ -1,0 +1,22 @@
+{
+  "name": "ammonite-logger",
+  "version": "1.0.0",
+  "description": "Logging module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amm0nite/ammonite-logger.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amm0nite/ammonite-logger/issues"
+  },
+  "homepage": "https://github.com/amm0nite/ammonite-logger#readme",
+  "dependencies": {
+    "winston": "^2.4.4"
+  }
+}
