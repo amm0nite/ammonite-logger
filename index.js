@@ -1,18 +1,26 @@
-const logger = require('winston');
 
-logger.setLevels({ error:0, warn:1, info:2, debug:3 });
-logger.addColors({ debug:'green', info:'cyan', warn:'yellow', error:'red' });
+const winston = require('winston');
 
-let logLevel = 'debug';
+let level = 'debug';
 if (process.env.NODE_ENV == 'prod') {
-    logLevel = 'info';
+    level = 'info';
 }
 
-logger.remove(logger.transports.Console);
-logger.add(logger.transports.Console, {
-    level:     logLevel,
-    colorize:  true,
-    timestamp: true
+const logger = winston.createLogger({
+  level,
+  format: winston.format.json(),
+  defaultMeta: {},
+  transports: [
+    new winston.transports.Console({
+        format: winston.format.combine(
+            winston.format.timestamp(),
+            winston.format.errors({ stack: true }),
+            winston.format.splat(),
+            winston.format.colorize(),
+            winston.format.simple()
+        ),
+    }),
+  ],
 });
 
 module.exports = logger;

@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/amm0nite/ammonite-logger#readme",
   "dependencies": {
-    "winston": "^2.4.4"
+    "winston": "^3.3.3"
   }
 }

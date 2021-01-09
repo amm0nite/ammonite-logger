@@ -6,7 +6,7 @@ try {
     throw new Error("BIM");
 } catch (err) {
     logger.error(err);
-    logger.warn('errored: ', err);
+    logger.warn('errored: %s', err);
     console.log('------------');
     console.log(err);
 }
