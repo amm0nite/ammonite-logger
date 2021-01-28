@@ -1,6 +1,10 @@
 const logger = require('./index.js');
 
-logger.info('HELLO', { foo: 'bar' });
+logger.debug('test');
+logger.debug({ hello: 'world' });
+console.log({ hello: 'world' });
+
+logger.info('HELLO');
 
 try {
     throw new Error("BIM");

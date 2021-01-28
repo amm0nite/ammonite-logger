@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/amm0nite/ammonite-logger#readme",
   "dependencies": {
-    "winston": "^3.3.3"
+    "chalk": "^4.1.0"
   }
 }
