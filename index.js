@@ -54,8 +54,6 @@ class Logger {
         }
 
         output += ' ';
-        output += chalk.gray(message.constructor.name);
-        output += ' ';
 
         if (message instanceof Error) {
             message = message.message + "\n" + message.stack;
