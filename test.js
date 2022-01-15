@@ -1,4 +1,4 @@
-const logger = require('./index.js');
+import logger from "./index.js";
 
 logger.debug('test');
 logger.debug({ hello: 'world' });

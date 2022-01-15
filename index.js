@@ -1,6 +1,4 @@
-'use strict';
-
-const chalk = require('chalk');
+import chalk from "chalk";
 
 class Logger {
     constructor(level) {
@@ -73,4 +71,5 @@ if (process.env.NODE_ENV == 'prod') {
     level = 'info';
 }
 
-module.exports = new Logger(level);
+const logger = new Logger(level);
+export default logger;
