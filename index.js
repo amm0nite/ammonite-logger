@@ -67,7 +67,8 @@ class Logger {
 }
 
 let level = 'debug';
-if (process.env.NODE_ENV.startsWith('prod')) {
+const nodeEnv = process.env.NODE_ENV;
+if (nodeEnv && nodeEnv.startsWith('prod')) {
     level = 'info';
 }
 
